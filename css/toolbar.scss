@@ -1,0 +1,102 @@
+/* Creating a responsive toolbar from scratch */
+.toolbar {
+    display: flex;
+    height: 50px; /* Adjust height for visibility */
+    text-align: center;
+
+    /* Styling the buttons and text in the toolbar */
+    %general {
+        flex-grow: 1;
+        text-decoration: none;
+        padding: 10px 0;
+        border-bottom: 2px solid $border-color;
+        border-right: 2px solid $border-color;
+        transition: background-color 0.3s ease;
+        color: $primary-color;
+        font-size: 16px;
+    }
+
+    /* Extend %general for all relevant elements */
+    div, a, .dropdown-button {
+        @extend %general;
+    }
+
+    div {
+        background-color: $accent-color2;
+    }
+
+    a {
+        background-color: $accent-color1;
+            
+            /* Making the border on the right not appear */
+            &:last-child {
+                border-right: none;
+            }
+
+            /* Adding a hover effect for buttons */
+            &:hover {
+                background-color: $accent-color2; /* Change color on hover */
+            }
+        }
+
+    /* The hamburger menu and dropdown menu */
+    .dropdown-button {
+        display: none;
+        cursor: pointer;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+        background-color: $accent-color1;
+
+        &:hover {
+            background-color: $accent-color2;
+        }
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: fixed; 
+        top: 50px;
+        left: 0;
+        width: 100%; 
+        z-index: 100; 
+    
+        background-color: $accent-color1;
+        border: none;
+    
+        flex-direction: column; /* Stack items vertically */
+        justify-content: flex-start; /* Align items at the top */
+        align-items: stretch; /* Ensure items take full width */
+    
+        a {
+            display: block;
+            text-align: center; /* Center the text */
+            border-right: none;
+            border-bottom: 1px solid $border-color;
+    
+            &:last-child {
+                border-bottom: none;
+            }
+    
+            &:hover {
+                background-color: $accent-color2;
+            }
+        }
+    }
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 500px) {
+    .toolbar a {
+        display: none; /* Hide the toolbar links */
+    }
+
+    .toolbar .dropdown-button {
+        display: flex; /* Show the hamburger menu */
+    }
+
+    .toolbar .dropdown-menu.active {
+        display: flex; /* Show the dropdown menu when active */
+    }
+}

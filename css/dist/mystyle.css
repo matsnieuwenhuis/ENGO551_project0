@@ -1,0 +1,98 @@
+/* Defining SASS variables for reoccurring colors and fonts */
+/* Importing the toolbar.scss stylsheet */
+/* Creating a responsive toolbar from scratch */
+.toolbar {
+  display: flex;
+  height: 50px; /* Adjust height for visibility */
+  text-align: center;
+  /* Styling the buttons and text in the toolbar */
+  /* Extend %general for all relevant elements */
+  /* The hamburger menu and dropdown menu */
+}
+.toolbar div, .toolbar a, .toolbar .dropdown-button {
+  flex-grow: 1;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 2px solid grey;
+  border-right: 2px solid grey;
+  transition: background-color 0.3s ease;
+  color: #1c1c1e;
+  font-size: 16px;
+}
+.toolbar div {
+  background-color: #91f4ff;
+}
+.toolbar a {
+  background-color: #00e5ff;
+  /* Making the border on the right not appear */
+  /* Adding a hover effect for buttons */
+}
+.toolbar a:last-child {
+  border-right: none;
+}
+.toolbar a:hover {
+  background-color: #91f4ff; /* Change color on hover */
+}
+.toolbar .dropdown-button {
+  display: none;
+  cursor: pointer;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #00e5ff;
+}
+.toolbar .dropdown-button:hover {
+  background-color: #91f4ff;
+}
+.toolbar .dropdown-menu {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #00e5ff;
+  border: none;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items at the top */
+  align-items: stretch; /* Ensure items take full width */
+}
+.toolbar .dropdown-menu a {
+  display: block;
+  text-align: center; /* Center the text */
+  border-right: none;
+  border-bottom: 1px solid grey;
+}
+.toolbar .dropdown-menu a:last-child {
+  border-bottom: none;
+}
+.toolbar .dropdown-menu a:hover {
+  background-color: #91f4ff;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 500px) {
+  .toolbar a {
+    display: none; /* Hide the toolbar links */
+  }
+  .toolbar .dropdown-button {
+    display: flex; /* Show the hamburger menu */
+  }
+  .toolbar .dropdown-menu.active {
+    display: flex; /* Show the dropdown menu when active */
+  }
+}
+/* Basic styles for the body and html */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1e;
+  font-family: "monaco", "Consolas", "Lucida Console", "monospace";
+  width: 100%;
+}
+
+.row > div {
+  padding: 20px;
+  color: #00e5ff;
+  text-align: center;
+}

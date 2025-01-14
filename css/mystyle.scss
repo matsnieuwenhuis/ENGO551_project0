@@ -1,0 +1,24 @@
+/* Defining SASS variables for reoccurring colors and fonts */
+$primary-color: #1C1C1EFF;
+$border-color: grey;
+$accent-color1: #00e5ff;
+$accent-color2: #91f4ff;
+$font-family: "monaco", "Consolas", "Lucida Console", "monospace";
+
+/* Importing the toolbar.scss stylsheet */
+@import "toolbar.scss";
+
+/* Basic styles for the body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: $primary-color;
+    font-family: $font-family;
+    width: 100%;
+}
+
+.row > div {
+    padding: 20px;
+    color: $accent-color1;
+    text-align: center;
+}
