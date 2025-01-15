@@ -26,6 +26,7 @@ body, html {
 #intro {
     font-size: 12px;
     color: white;
+    text-align: center;
 }
 
 .mepic {
@@ -41,6 +42,29 @@ body, html {
 ul {
     text-align: left;
     border: 2px solid $accent-color2;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+th {
+    font-weight: bold;
+}
+
+th, td {
+    border: 2px solid $accent-color2;
+    padding: 8px;
+    text-align: left;
+}
+th:nth-child(1), td:nth-child(1) {
+    width: 60%;
+}
+th:nth-child(2), td:nth-child(2),
+th:nth-child(3), td:nth-child(3) {
+    width: 20%;
 }
 
 @media (max-width: 800px) {
