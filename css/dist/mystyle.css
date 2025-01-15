@@ -102,11 +102,15 @@ body, html {
   color: white;
 }
 
-img {
+.mepic {
   padding: 10px 10px;
   background-color: #00e5ff;
   width: 500px;
   height: 600px;
+}
+
+.carouusel-item {
+  object-fit: cover;
 }
 
 ul {
@@ -115,7 +119,7 @@ ul {
 }
 
 @media (max-width: 800px) {
-  img {
+  .mepic {
     width: 400px;
     height: 450px;
   }
