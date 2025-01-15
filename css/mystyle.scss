@@ -22,3 +22,27 @@ body, html {
     color: $accent-color1;
     text-align: center;
 }
+
+#intro {
+    font-size: 12px;
+    color: white;
+}
+
+img {
+    padding: 10px 10px;
+    background-color: $accent-color1;
+    width: 500px;
+    height: 600px;
+}
+
+ul {
+    text-align: left;
+    border: 2px solid $accent-color2;
+}
+
+@media (max-width: 800px) {
+    img {
+        width: 400px;
+        height: 450px;
+    }
+}
