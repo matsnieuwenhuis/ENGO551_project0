@@ -5,7 +5,7 @@
 
 ## Overview
 
-This repository contains the source files for my personal website, which includes a brief introduction about me, work experience, hobbies, and a contact page. Below is a detailed description of the contents of each file to assist with grading.
+This repository contains the source files for my personal website, which includes a brief introduction about me, work experience, hobbies, and a contact page. Below is a detailed description of the contents of each file to assist with grading. Link to Video: https://youtu.be/qE-_UH31vSI
 
 ## General Features
 
